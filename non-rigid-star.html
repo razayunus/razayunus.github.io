@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Recent Trends in 3D Reconstruction of General Non-Rigid Scenes">
+  <meta name="keywords" content="3D Reconstruction of General Non-Rigid Scenes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Reconstruction of General Non-Rigid Scenes</title>
+
+<!-- <link rel="icon" type="image/png" href="media/non-rigid-star/icon.png">  -->
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/non-rigid-star/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./media/non-rigid-star/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./media/non-rigid-star/js/fontawesome.all.min.js"></script>
+  <script src="./media/non-rigid-star/js/bulma-carousel.min.js"></script>
+  <script src="./media/non-rigid-star/js/bulma-slider.min.js"></script>
+  <script src="./media/non-rigid-star/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://razayunus.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://geometric-rl.mpi-inf.mpg.de/npg/">
+            Neural Parametric Gaussians
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Recent Trends in 3D Reconstruction of General Non-Rigid Scenes</h1>
+          <h1 class="title is-2 publication-title">State-of-the-Art Report</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">Eurographics 2024 STAR / Computer Graphics Forum</h2>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://razayunus.github.io">Raza Yunus</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+              <a href="https://m-niemeyer.github.io/">Michael Niemeyer</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://yiyiliao.github.io/">Yiyi Liao</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://chrirupp.github.io/">Christian Rupprecht</a><sup>5</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><br>
+            <span class="author-block">
+              <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html">Gerard Pons-Moll</a><sup>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a><sup>7</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://cvmp.cs.uni-saarland.de/people/#eddy-ilg">Eddy Ilg</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Saarland University, SIC</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>MPI for Informatics, SIC</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>Google</span>&nbsp;&nbsp;<br>
+            <span class="author-block"><sup>4</sup>Zhejiang University</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>5</sup>University of Oxford</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>6</sup>University of Tübingen</span>
+            <span class="author-block"><sup>7</sup>University of Maryland</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.15064"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- PDF Talk Link. -->
+              <span class="link-block">
+                <a href="./media/non-rigid-star/non_rigid_star_talk.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-file-pdf"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <!-- PPT Talk Link. -->
+              <!--<span class="link-block">
+                <a href="./media/non-rigid-star/non_rigid_star_talk.pptx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides (PPT)</span>
+                </a>
+              </span>-->
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="rounded" src="./media/non-rigid-star/star_teaser.png">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reconstructing models of the real world, including 3D geometry, appearance, and motion of real scenes, is essential for computer graphics and computer vision. It enables the synthesizing of photorealistic novel views, useful for the movie industry
+            and AR/VR applications. It also facilitates the content creation necessary in computer games and AR/VR by avoiding laborious manual design processes. Further, such models are fundamental for intelligent computing systems that need to interpret
+            real-world scenes and actions to act and interact safely with the human world. Notably, the world surrounding us is dynamic,
+            and reconstructing models of dynamic, non-rigidly moving scenes is a severely underconstrained and challenging problem.
+            This state-of-the-art report (STAR) offers the reader a comprehensive summary of state-of-the-art techniques with monocular
+            and multi-view inputs such as data from RGB and RGB-D sensors, among others, conveying an understanding of different
+            approaches, their potential applications, and promising further research directions. The report covers 3D reconstruction of
+            general non-rigid scenes and further addresses the techniques for scene decomposition, editing and controlling, and generalizable and generative modeling. More specifically, we first review the common and fundamental concepts necessary to understand
+            and navigate the field and then discuss the state-of-the-art techniques by reviewing recent approaches that use traditional and
+            machine-learning-based neural representations, including a discussion on the newly enabled applications. The STAR is concluded with a discussion of the remaining limitations and open challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yunus2024nonrigidstar,
+      journal = {Computer Graphics Forum},
+      title = {{Recent Trends in 3D Reconstruction of General Non-Rigid Scenes}},
+      author = {Yunus, Raza and Lenssen, Jan Eric and Niemeyer, Michael and
+      Liao, Yiyi and Rupprecht, Christian and Theobalt, Christian and Pons-Moll, Gerard and
+      Huang, Jia-Bin and Golyanik, Vladislav and Ilg, Eddy},
+      year = {2024},
+      publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+      ISSN = {1467-8659},
+      DOI = {10.1111/cgf.15062}
+    }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
