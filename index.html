@@ -101,6 +101,9 @@
         <p>
           I received my Masters in Informatics from <a href="https://www.tum.de/en/">TU Munich</a> under the supervision of <a href="https://federicotombari.github.io/">Federico Tombari</a>, and a Bachelors in Software Engineering from the <a href="https://seecs.nust.edu.pk/">National University of Sciences and Technology</a>. 
         </p>
+        <!-- <p>
+          My research interests lie in 3D Computer Vision in general, particularly in reconstructing 3D models that allow the synthesis of photorealistic novel views for AR/VR and content creation applications. I’m mainly focusing on 1) reconstructing the surface materials of a scene, which enables scene relighting, and 2) handling non-rigid deformations, which allows the reconstruction of richer data since the world is inherently dynamic.
+        </p> -->
 
         <p align=center>
           <a href="mailto:ryunus@mpi-inf.mpg.de">Email</a> &nbsp|&nbsp
@@ -137,7 +140,7 @@
 
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
+      <!-- <tr>
         <td>
           <heading>News</heading>
             <ul>
@@ -146,7 +149,7 @@
             </div></div>
             </ul>
         </td>
-      </tr>
+      </tr> -->
       <tr>
         <td width="100%" valign="middle">
           <heading>Research</heading>
@@ -159,14 +162,38 @@
         <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
           <td width="25%">
             <div class="one">
+            <img src='media/teaser_spurfies.png' width="160" height="104" style="object-fit: contain;"></div>
+          </td>
+          <td valign="top" width="75%">
+              <papertitle>
+                  Spurfies: Sparse Surface Reconstruction using Local Geometry Priors
+              </papertitle>
+          <br>
+            <a href="https://kevinyitshak.github.io/">Kevin Raj</a>,
+            <a href="https://geometric-rl.mpi-inf.mpg.de/people/Wewer.html">Christopher Wewer</a>,
+            <strong>Raza Yunus</strong>,
+            <a href="https://cvmp.cs.uni-saarland.de/people/#eddy-ilg">Eddy Ilg</a>,
+            <a href="https://geometric-rl.mpi-inf.mpg.de/people/lenssen.html">Jan Eric Lenssen</a>
+          <br>
+              <em>International Conference on 3D Vision (3DV), 2025</em>
+          <br>
+            <a href="https://arxiv.org/abs/2408.16544">paper</a> |
+            <a href="https://geometric-rl.mpi-inf.mpg.de/spurfies/">project page</a> |
+            <a href="https://github.com/kevinYitshak/spurfies">code</a>
+          </td>
+        </tr>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
+          <td width="25%">
+            <div class="one">
             <img src='media/teaser_npg.gif' width="160" height="104" style="object-fit: cover;"></div>
           </td>
           <td valign="top" width="75%">
-              <a href="https://geometric-rl.mpi-inf.mpg.de/npg/">
-                <papertitle>
-                    Neural Parametric Gaussians for Monocular Non-Rigid Object Reconstruction
-                </papertitle>
-              </a>
+              <papertitle>
+                  Neural Parametric Gaussians for Monocular Non-Rigid Object Reconstruction
+              </papertitle>
           <br>
             <a href="https://devikalyandas.github.io/">Devikalyan Das</a>,
             <a href="https://geometric-rl.mpi-inf.mpg.de/people/Wewer.html">Christopher Wewer</a>,
@@ -190,11 +217,9 @@
             <img src='media/teaser_non_rigid_star.png' width="160" height="104" style="object-fit: cover;"></div>
           </td>
           <td valign="top" width="75%">
-              <a href="https://razayunus.github.io/non-rigid-star">
-                <papertitle>
-                    Recent Trends in 3D Reconstruction of General Non-Rigid Scenes
-                </papertitle>
-              </a>
+              <papertitle>
+                  Recent Trends in 3D Reconstruction of General Non-Rigid Scenes
+              </papertitle>
           <br>
             <strong>Raza Yunus</strong>,
             <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a>,
@@ -214,13 +239,61 @@
           </td>
         </tr>
 
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
+          <td width="25%">
+            <div class="one">
+            <img src='media/teaser_manhattan_slam.png' width="160" height="104" style="object-fit: cover;"></div>
+          </td>
+          <td valign="top" width="75%">
+              <papertitle>
+                  ManhattanSLAM: Robust Planar Tracking and Mapping Leveraging Mixture of Manhattan Frames
+              </papertitle>
+          <br>
+            <strong>Raza Yunus</strong>,
+            <a href="https://yanyan-li.github.io/">Yanyan Li</a>,
+            <a href="https://federicotombari.github.io/">Federico Tombari</a>
+          <br>
+              <em>International Conference on Robotics and Automation (ICRA), 2021</em>
+          <br>
+            <a href="https://arxiv.org/abs/2103.15068">paper</a> |
+            <a href="https://github.com/razayunus/ManhattanSLAM">code</a>
+          </td>
+        </tr>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" >
+    
+        <tr onmouseout="nicer_stop()" onmouseover="nicer_start()">  
+          <td width="25%">
+            <div class="one">
+            <img src='media/teaser_rgbd_slam.gif' width="160" height="104" style="object-fit: contain;"></div>
+          </td>
+          <td valign="top" width="75%">
+              <papertitle>
+                  RGB-D SLAM with Structural Regularities
+              </papertitle>
+          <br>
+            <a href="https://yanyan-li.github.io/">Yanyan Li</a>,
+            <strong>Raza Yunus</strong>,
+            <a href="https://scholar.google.com/citations?user=Linn47YAAAAJ">Nikolas Brasch</a>
+            <a href="https://www.professoren.tum.de/en/navab-nassir">Nassir Navab</a>
+            <a href="https://federicotombari.github.io/">Federico Tombari</a>
+          <br>
+              <em>International Conference on Robotics and Automation (ICRA), 2021</em>
+          <br>
+            <a href="https://arxiv.org/abs/2010.07997">paper</a> |
+            <a href="https://github.com/yanyan-li/PlanarSLAM">code</a>
+          </td>
+        </tr>
+
     <!-- Academic Services -->
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
     <heading>Academic Services</heading>
         <tr>
         <td>
             <ul>
-                <li> <strong>Conference Reviewer</strong>: CVPR, ECCV<br>
+                <li> <strong>Conference Reviewer</strong>: CVPR, ECCV, AAAI<br>
                 <li> <strong>Journal Reviewer</strong>: RA-L
             </ul>
         </td>
