@@ -8,23 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dynamic Inverse Rendering</title>
 
-<!-- <link rel="icon" type="image/png" href="media/non-rigid-star/icon.png">  -->
+<!-- <link rel="icon" type="image/png" href="media/DIR/icon.png">  -->
 <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma.min.css">
-  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./media/non-rigid-star/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./media/non-rigid-star/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./media/DIR/css/bulma.min.css">
+  <link rel="stylesheet" href="./media/DIR/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./media/DIR/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./media/DIR/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./media/non-rigid-star/css/index.css">
+  <link rel="stylesheet" href="./media/DIR/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./media/non-rigid-star/js/fontawesome.all.min.js"></script>
-  <script src="./media/non-rigid-star/js/bulma-carousel.min.js"></script>
-  <script src="./media/non-rigid-star/js/bulma-slider.min.js"></script>
-  <script src="./media/non-rigid-star/js/index.js"></script>
+  <script defer src="./media/DIR/js/fontawesome.all.min.js"></script>
+  <script src="./media/DIR/js/bulma-carousel.min.js"></script>
+  <script src="./media/DIR/js/bulma-slider.min.js"></script>
+  <script src="./media/DIR/js/index.js"></script>
 </head>
 <body>
 
@@ -49,6 +49,9 @@
           More Research
         </a>
         <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://razayunus.github.io/non-rigid-star">
+            Recent Trends in 3D Reconstruction of General Non-Rigid Scenes
+          </a>
           <a class="navbar-item" href="https://geometric-rl.mpi-inf.mpg.de/spurfies/">
             Spurfies
           </a>
@@ -72,15 +75,97 @@
           <div class="column is-full_width">
             <h2 class="title is-4">ECCV 2026</h2>
           </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://razayunus.github.io">Raza Yunus</a><sup>1,3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=QGlp5ywAAAAJ&hl=en">Benjamin Ummenhofer</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+              <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"></span>
+              <a href="https://scholar.google.com/citations?user=MYvSvGsAAAAJ&hl=de">Eddy Ilg</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Technology Nuremberg</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Intel</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>MPI for Informatics, SIC</span>&nbsp;&nbsp;
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-code"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
         </div>
     </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="rounded" src="./media/DIR/teaser.png">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Decomposing outgoing surface radiance into material and illumination during inverse rendering is essential for applications such as relighting and augmented reality, yet it is severely ill-posed since multiple combinations can result in the same observed colour. Capturing an object under multiple lighting conditions usually helps resolve this ambiguity as it constrains the optimization towards correct solutions. In this work, we explore the potential of reconstructing rigidly moving objects---which provides observations of diverse light-surface interactions---to resolve the material-lighting ambiguity in inverse rendering. For this purpose, we introduce a relightable approach that marries object tracking and reconstruction with inverse rendering for general rigidly moving objects. Our experimental analysis on synthetic data demonstrates that motion can be an advantage for disentangling material and lighting: the reconstructed material is significantly more accurate when the object is observed under rigid motion than when it is static. Moreover, results on RGB videos of real hand-held objects show that our pipeline preserves this advantage even under noisy real-world conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
   </div>
 </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code></code></pre>
+    <pre><code>
+      @inproceedings{yunus2026dynamic,
+        author = {Yunus, Raza and Ummenhofer, Benjamin and Lenssen, Jan Eric and Ilg, Eddy},
+        title = {Dynamic Inverse Rendering for Enhanced Material-Lighting Decomposition},
+        year = {2026},
+        booktitle = {European Conference on Computer Vision (ECCV)},
+      }
+    </code></pre>
   </div>
 </section>
 
