@@ -71,26 +71,30 @@
     <div class="container is-max-desktop">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Dynamic Inverse Rendering for Enhanced Material-Lighting Decomposition</h1>
-          <!-- <h1 class="title is-2 publication-title">State-of-the-Art Report</h1> -->
           <div class="column is-full_width">
             <h2 class="title is-4">ECCV 2026</h2>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://razayunus.github.io">Raza Yunus</a><sup>1,3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=QGlp5ywAAAAJ&hl=en">Benjamin Ummenhofer</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="author-block">
-              <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="author-block"></span>
-              <a href="https://scholar.google.com/citations?user=MYvSvGsAAAAJ&hl=de">Eddy Ilg</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://razayunus.github.io">Raza Yunus</a><sup>1,3</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=QGlp5ywAAAAJ&hl=en">Benjamin Ummenhofer</a><sup>2</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://janericlenssen.github.io/">Jan Eric Lenssen</a><sup>3</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=MYvSvGsAAAAJ&hl=de">Eddy Ilg</a><sup>1,†</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Technology Nuremberg</span>&nbsp;&nbsp;
             <span class="author-block"><sup>2</sup>Intel</span>&nbsp;&nbsp;
-            <span class="author-block"><sup>3</sup>MPI for Informatics, SIC</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>MPI for Informatics, SIC</span>
+            <br>
+            <span class="author-block"><sup>†</sup>Now at Google</span>
           </div>
 
           <div class="column has-text-centered">
@@ -132,26 +136,243 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img class="rounded" src="./media/DIR/teaser.png">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <img class="rounded" style="padding: 1rem;" src="./media/DIR/teaser.png">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="idea">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column notification is-four-fifths">
+        <div class="content has-text-centered">
+          <p>
+            <b>Key idea:</b> Observing an object in motion, e.g. in a hand-held capture, provides stronger constraints for material-lighting decomposition than a static object capture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Decomposing outgoing surface radiance into material and illumination during inverse rendering is essential for applications such as relighting and augmented reality, yet it is severely ill-posed since multiple combinations can result in the same observed colour. Capturing an object under multiple lighting conditions usually helps resolve this ambiguity as it constrains the optimization towards correct solutions. In this work, we explore the potential of reconstructing rigidly moving objects---which provides observations of diverse light-surface interactions---to resolve the material-lighting ambiguity in inverse rendering. For this purpose, we introduce a relightable approach that marries object tracking and reconstruction with inverse rendering for general rigidly moving objects. Our experimental analysis on synthetic data demonstrates that motion can be an advantage for disentangling material and lighting: the reconstructed material is significantly more accurate when the object is observed under rigid motion than when it is static. Moreover, results on RGB videos of real hand-held objects show that our pipeline preserves this advantage even under noisy real-world conditions.
+            Decomposing outgoing surface radiance into material and illumination during inverse rendering is essential for applications such as relighting and augmented reality, yet it is severely ill-posed since multiple combinations can result in the same observed colour. Capturing an object under multiple lighting conditions usually helps resolve this ambiguity as it constrains the optimization towards correct solutions. In this work, we explore the potential of reconstructing rigidly moving objects&mdash;which provides observations of diverse light-surface interactions&mdash;to resolve the material-lighting ambiguity in inverse rendering. For this purpose, we introduce a relightable approach that marries object tracking and reconstruction with inverse rendering for general rigidly moving objects. Our experimental analysis on synthetic data demonstrates that motion can be an advantage for disentangling material and lighting: the reconstructed material is significantly more accurate when the object is observed under rigid motion than when it is static. Moreover, results on RGB videos of real hand-held objects show that our pipeline preserves this advantage even under noisy real-world conditions.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" id="contributions">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Contributions</h2>
+
+        <div class="columns has-text-left">
+          <div class="column is-flex">
+            <div class="box is-flex is-flex-direction-column is-flex-grow-1">
+              <h3 class="title is-5">
+                <span class="tag is-dark is-rounded mr-2">1</span>
+                Motion as a constraint
+              </h3>
+              <p>
+                We show that observing significant object motion provides stronger material-lighting constraints than static object capture.
+              </p>
+            </div>
+          </div>
+
+          <div class="column is-flex">
+            <div class="box is-flex is-flex-direction-column is-flex-grow-1">
+              <h3 class="title is-5">
+                <span class="tag is-dark is-rounded mr-2">2</span>
+                Relightable 4D pipeline
+              </h3>
+              <p>
+                We jointly handle object pose tracking, geometry reconstruction and physically based material-lighting estimation.
+              </p>
+            </div>
+          </div>
+
+          <div class="column is-flex">
+            <div class="box is-flex is-flex-direction-column is-flex-grow-1">
+              <h3 class="title is-5">
+                <span class="tag is-dark is-rounded mr-2">3</span>
+                Controlled benchmark
+              </h3>
+              <p>
+                We introduce synthetic captures with ground-truth materials and relit views across static dome, turntable, and hand-held settings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <!-- <div class="content has-text-justified">
+          <p>
+            We use a three-stage pipeline to avoid directly optimizing geometry, pose, material, and illumination from scratch. The method first obtains robust coarse poses and geometry, then refines the object as SDF-based 3D Gaussians, and finally performs physically based inverse rendering on the moving object.
+          </p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <div class="content">
+          <h3 class="title is-5">1. Progressive initialization</h3>
+          <p>
+            Progressive optimization with a neural SDF representation to get coarse initial estimates for object poses and geometry.
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content">
+          <h3 class="title is-5">2. Global refinement</h3>
+          <p>
+            Refinement with an SDF-based 3D Gaussian representation to capture detailed geometry for inverse rendering.
+          </p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content">
+          <h3 class="title is-5">3. Dynamic inverse rendering</h3>
+          <p>
+            Physically-based rendering from posed Gaussians to obtain accurate material-lighting decomposition from a moving object.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <img src="media/DIR/method.png" alt="Overview of the three-stage dynamic inverse rendering method.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Synthetic capture settings</h3>
+        <div class="content has-text-justified">
+          <p>
+            <b>Qualitative:</b> From 
+            <span class="is-nowrap">
+              static
+              <img src="media/DIR/static_icon.png" alt="Static capture" style="height: 1em; vertical-align: middle;">
+            </span> to 
+            <span class="is-nowrap">
+              turntable
+              <img src="media/DIR/turntable_icon.png" alt="Turntable capture" style="height: 1em; vertical-align: middle;">
+            </span> to 
+            <span class="is-nowrap">
+              hand-held
+              <img src="media/DIR/handheld_icon.png" alt="Hand-held capture" style="height: 1.2em; vertical-align: middle;">
+            </span> captures, albedo and lighting become progressively less entangled, producing better relights across objects.
+          </p>
+        </div>
+        <img src="media/DIR/synthetic_qualitative.png" alt="Synthetic qualitative comparison across static, turntable, and hand-held capture.">
+        <div style="height: 1rem;"></div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Quantitative:</b> Hand-held rotations consistently improve albedo-light disentanglement and relighting quality for both the original (specular) and diffuse variants of our dataset, even outperforming the static capture (which uses ground-truth poses) when the object poses are estimated.
+          </p>
+        </div>
+        <img src="media/DIR/synthetic_quantitative.png" alt="Synthetic quantitative comparison across static, turntable, and hand-held capture." style="max-height: 460px; width: 100%; object-fit: contain;">
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-5 has-text-centered">Real captures</h3>
+        <div class="content has-text-justified">
+          <p>
+            Real hand-held sequences produce cleaner albedo and more plausible relighting than static captures under similar render quality.
+          </p>
+        </div>
+        <img src="media/DIR/real.png" alt="Real capture comparison for static multiview and hand-held settings.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="analysis">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Analysis</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h3 class="title is-5 has-text-centered">Roughness variation</h3>
+        <div class="content has-text-justified">
+          <p>
+            Hand-held capture recovers sharper illumination, even for diffuse objects where static capture is under-constrained.
+          </p>
+        </div>
+        <img src="media/DIR/roughness.png" alt="Environment reconstruction under varying roughness.">
+      </div>
+      <div class="column is-half">
+        <h3 class="title is-5 has-text-centered">Illumination complexity</h3>
+        <div class="content has-text-justified">
+          <p>
+            Under complex lighting, static albedo quality degrades while hand-held capture maintains high quality.
+          </p>
+        </div>
+        <div style="height: 1rem;"></div>
+        <img src="media/DIR/illumination.png" alt="Effect of illumination complexity on decomposition.">
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h3 class="title is-5 has-text-centered">View sampling</h3>
+        <div class="content has-text-justified">
+          <p>
+            25 hand-held views outperform 400 static views, showing that the decomposition gain is independent of view sampling.
+          </p>
+        </div>
+        <img src="media/DIR/views.png" alt="View sampling ablation comparing static and hand-held views.">
+      </div>
+      <div class="column is-half">
+        <h3 class="title is-5 has-text-centered">Rotation diversity</h3>
+        <div class="content has-text-justified">
+          <p>
+            Increasing diversity in object rotations improves disentanglement for complex environments.
+          </p>
+        </div>
+        <img src="media/DIR/rotation.png" alt="Effect of diversity in hand-held rotations on decomposition.">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -171,16 +392,11 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p style="text-align: center;">
-            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
-        </div>
-      </div>
+            This webpage template is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
